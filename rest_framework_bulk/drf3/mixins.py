@@ -114,5 +114,4 @@ class BulkDestroyModelMixin(object):
         instance.delete()
 
     def perform_bulk_destroy(self, objects):
-        for obj in objects:
-            self.perform_destroy(obj)
+        objects.delete()
